@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jHRXnysSg5MfTNs9XP/vq9UJ3aMbNSD2Kj/ePT+prrLdazF8+DNsq7R4D6B6rwqJN17XRcIuLkwBoZJPhxw4mA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\ThuenhatroAPI\\ThuenhatroClient\\ThuenhatroClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
