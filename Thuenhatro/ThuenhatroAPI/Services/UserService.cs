@@ -66,5 +66,12 @@ namespace ThuenhatroAPI.Services
                 return null;
             }
         }
+        public async Task<User> CheckLogin(User user)
+        {
+            var userLogin = context.Users
+             .Where(a => a.UserName.Equals(user.UserName) && a.PassWord.Equals(user.PassWord) && a.Status.Equals(1))
+             .FirstOrDefault();
+            return userLogin;
+        }
     }
 }
