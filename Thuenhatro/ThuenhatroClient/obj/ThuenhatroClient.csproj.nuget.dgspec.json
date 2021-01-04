@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {}
+    "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {
+    "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
         "projectName": "ThuenhatroClient",
-        "projectPath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
+        "projectPath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\ThuenhatroClient\\obj\\",
+        "outputPath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
