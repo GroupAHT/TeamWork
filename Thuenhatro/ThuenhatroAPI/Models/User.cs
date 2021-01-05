@@ -28,6 +28,8 @@ namespace ThuenhatroAPI.Models
         public bool IsAdmin { get; set; }
         public bool Status { get; set; }
         public string MembershipCode { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
         public DateTime CreateAt { get; set; }
     }
 }
