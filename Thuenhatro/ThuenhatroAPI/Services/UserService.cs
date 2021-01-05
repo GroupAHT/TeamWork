@@ -15,14 +15,14 @@ namespace ThuenhatroAPI.Services
         }
         public async Task<IEnumerable<User>> GetUsers()
         {
-            return context.Users.ToList();
+            return context.User.ToList();
         }
         public async Task<User> DeleteUser(string id)
         {
-            User model = context.Users.SingleOrDefault(u => u.UserID.Equals(id));
+            User model = context.User.SingleOrDefault(u => u.UserID.Equals(id));
             if (model != null)
             {
-                context.Users.Remove(model);
+                context.User.Remove(model);
                 context.SaveChanges();
                 return model;
             }
@@ -33,7 +33,7 @@ namespace ThuenhatroAPI.Services
         }
         public async Task<User> GetUser(string id)
         {
-            var user = context.Users.SingleOrDefault(u => u.UserID.Equals(id));
+            var user = context.User.SingleOrDefault(u => u.UserID.Equals(id));
             if (user != null)
             {
                 return user;
@@ -45,19 +45,22 @@ namespace ThuenhatroAPI.Services
         }
         public async Task<User> PostUser(User user)
         {
-            context.Users.Add(user);
+            context.User.Add(user);
             context.SaveChanges();
             return user;
         }
         public async Task<User> PutUser(User user)
         {
-            User model = context.Users.SingleOrDefault(u => u.UserID.Equals(user.UserID));
+            User model = context.User.SingleOrDefault(u => u.UserID.Equals(user.UserID));
             if(model != null)
             {
                 model.FirstName = user.FirstName;
                 model.LastName = user.LastName;
                 model.UserName = user.UserName;
                 model.PassWord = user.PassWord;
+                model.MembershipCode = user.MembershipCode;
+                model.Phone = user.Phone;
+                model.Email = user.Email;
                 context.SaveChanges();
                 return user;
             }
@@ -66,12 +69,6 @@ namespace ThuenhatroAPI.Services
                 return null;
             }
         }
-        public async Task<User> CheckLogin(User user)
-        {
-            var userLogin = context.Users
-             .Where(a => a.UserName.Equals(user.UserName) && a.PassWord.Equals(user.PassWord) && a.Status.Equals(1))
-             .FirstOrDefault();
-            return userLogin;
-        }
+
     }
 }
