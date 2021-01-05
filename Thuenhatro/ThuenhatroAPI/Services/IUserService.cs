@@ -13,7 +13,5 @@ namespace ThuenhatroAPI.Services
         Task<User> PostUser(User user);
         Task<User> PutUser(User user);
         Task<User> DeleteUser(string id);
-        Task<User> CheckLogin(User user);
-
     }
 }
