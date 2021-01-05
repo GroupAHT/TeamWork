@@ -10,6 +10,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using ThuenhatroAPI.Models;
+using ThuenhatroAPI.Services;
+using Microsoft.EntityFrameworkCore;
+
 namespace ThuenhatroAPI
 {
     public class Startup
@@ -24,6 +28,9 @@ namespace ThuenhatroAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string str = "server=.;database=ThuenhatroDB ;uid=sa;pwd=123";
+            services.AddScoped<IUserService, UserService>();
+            services.AddDbContext<Context>(options => options.UseSqlServer(str));
             services.AddControllers();
         }
 
