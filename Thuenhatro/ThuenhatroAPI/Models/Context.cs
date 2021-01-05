@@ -9,8 +9,8 @@ namespace ThuenhatroAPI.Models
 {
     public class Context:DbContext
     {
-        public User(DbContextOptions options) : base(options) { }
-        public DbSet<User> Users { get; set; }
+       public Context (DbContextOptions options) : base(options) { }
+       public DbSet<User> User { get; set; }
 
     }
 }
