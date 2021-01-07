@@ -78,3 +78,6 @@ C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatr
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.dll
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.pdb
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.genruntimeconfig.cache
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmEmail.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmCodeEmail.cshtml.g.cs
