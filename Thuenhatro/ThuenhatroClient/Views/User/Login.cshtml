@@ -10,15 +10,17 @@
         <div class="col-sm-4">
             <h3>Đăng nhập</h3>
             <div class="Log">
-                <label>Tài Khoản</label>
-                <br />
-                <input type="text" name="uid" />
-                <br />
-                <label>Mật khẩu</label>
-                <br />
-                <input type="password" name="upass" />
-                <br />
-                <input style="margin-top:6px;" type="submit" value="Đăng nhập" class="badge-success" />
+                <form action="@Url.Action("Login", "User")" method="post" enctype="multipart/form-data">
+                    <label>Tài Khoản</label>
+                    <br />
+                    <input type="text" name="uid" />
+                    <br />
+                    <label>Mật khẩu</label>
+                    <br />
+                    <input type="password" name="upass" />
+                    <br />
+                    <input style="margin-top:6px;" type="submit" value="Đăng nhập" class="badge-success" />
+                </form>
             </div>
             <div style="text-align:center">
                 <a href="#">Bạn quên mật khẩu?</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="#">Tạo tài khoản mới</a>
