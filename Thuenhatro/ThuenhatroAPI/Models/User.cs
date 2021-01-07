@@ -28,7 +28,9 @@ namespace ThuenhatroAPI.Models
         public bool IsAdmin { get; set; }
         public bool Status { get; set; }
         public string MembershipCode { get; set; }
+        [Range(10, 12, ErrorMessage = "Số điện thoại từ 10-12 kí tự.")]
         public string Phone { get; set; }
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail không hợp lệ!")]
         public string Email { get; set; }
         public DateTime CreateAt { get; set; }
     }
