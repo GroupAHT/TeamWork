@@ -1,0 +1,120 @@
+﻿@model ThuenhatroClient.Models.User
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+            <h3>Đăng ký</h3>
+            <div class="Log">
+                <form action="@Url.Action("Register", "User")" method="post" enctype="multipart/form-data">
+                    <label>Họ</label>
+                    <br />
+                    <input type="text" name="uid" />
+                    <br />
+                    <label>Tên</label>
+                    <br />
+                    <input type="text" name="uid" />
+                    <br />
+
+                    <label>Tài Khoản</label>
+                    <br />
+                    <input type="text" name="uid" />
+                    <br />
+                    <label>Mật khẩu</label>
+                    <br />
+                    <input type="password" name="upass" />
+                    <br />
+                    <label>Số điện thoại</label>
+                    <br />
+                    <input type="number" name="uid" />
+                    <br />
+                    <label>Email</label>
+                    <br />
+                    <input type="email" name="uid" />
+                    <br />
+                    <input style="margin-top:6px;" type="submit" value="Đăng ký tài khoản mới" class="badge-success" />
+                </form>
+            </div>
+            <div style="text-align:center">
+                <a href="#">Đăng nhập ngay</a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="here">
+                <div class="text">
+                    <span>Hoặc</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <p style="margin-top:50px">
+                Đăng nhập bằng Facebook hoặc Google
+            </p>
+            <div class="FG">
+                <div class="facebook">
+                    <a href="http://facebook.com">Đăng nhập bằng Facebook</a>
+                </div>
+                <br />
+
+                <div class="Google">
+                    <a href="http://google.com">Đăng nhập bằng Google+</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <br />
+    <hr />
+    <div class="GT">
+        <div class="row" style="text-align:center">
+            <div class="col-sm-12">
+                <h4>Bạn đang có phòng trọ / căn hộ cho thuê?</h4>
+                <br />
+                <p>Không phải lo tìm người cho thuê, phòng trống kéo dài</p>
+
+                <div style="width:100%;  background-color: #c60e25; padding:10px; margin-top:0px">
+                    <a style="color:white;" href="#">Đăng tin ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="TCG">
+        <div class="row">
+            <div class="col-sm-4">
+                <div>
+                    <h5>Cho thuê phòng trọ</h5>
+                    <ul>
+                        <li><a href="#">Cho thuê phòng trọ TP.HCM</a></li>
+                        <li> <a href="#">Cho thuê phòng trọ Đồng Nai</a></li>
+                        <li><a href="#">Cho thuê phòng trọ Bình Dương</a></li>
+                        <li><a href="#">Cho thuê phòng trọ Đà Nẵng</a></li>
+                        <li> <a href="#">cho thuê phòng trọ Huế</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h5>Cho thuê nhà nguyên căn</h5>
+                <ul>
+                    <li><a href="#">Cho thuê nhà nguyên căn TP.HCM</a></li>
+                    <li> <a href="#">Cho thuê nhà nguyên căn Đồng Nai</a></li>
+                    <li><a href="#">Cho thuê nhà nguyên căn Bình Dương</a></li>
+                    <li><a href="#">Cho thuê nhà nguyên căn Đà Nẵng</a></li>
+                    <li> <a href="#">Cho thuê nhà nguyên căn Huế</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h5>Tìm người ở ghép</h5>
+                <ul>
+                    <li><a href="#">Tìm người ở ghép TP.HCM</a></li>
+                    <li> <a href="#">Tìm người ở ghép Đồng Nai</a></li>
+                    <li><a href="#">Tìm người ở ghép Bình Dương</a></li>
+                    <li><a href="#">Tìm người ở ghép Đà Nẵng</a></li>
+                    <li> <a href="#">Tìm người ở ghép Huế</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
