@@ -1,0 +1,111 @@
+﻿body {
+    background-color:aliceblue;
+}
+.here:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid black;
+    transform: translate(-50%);
+}
+
+.here {
+    margin: 10px auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+}
+
+.text span {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #aaa;
+    padding: 0;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+
+.Log label {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.Log input {
+    width: 100%;
+    margin-bottom: 6px;
+    border: none;
+    height:38px;
+    text-indent:25px;
+}
+.FG {
+    text-align: center;
+}
+
+    .FG .facebook {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #365899;
+        width: 100%;
+        border-radius: 3px;
+    }
+        .FG .facebook:hover {
+            background-color: #265ab1;
+        }
+        .FG .facebook a {
+            color: white;
+            text-decoration: none;
+        }
+    .FG .Google {
+        background-color: #EA4335;
+        padding: 10px;
+        border-radius: 3px;
+    }
+        .FG .Google:hover {
+            background-color: #dc1919;
+        }
+        .FG .Google a {
+            color: white;
+            text-decoration: none;
+        }
+.GT{
+    margin-top: 100px;
+}
+.GT h4{
+    color:indianred;
+}
+.TCG {
+    background-color: white;
+    margin-top: 100px
+}
+.TCG h5{
+    text-indent:40px;
+    padding-top:15px;
+    color:darkblue;
+}
+.TCG ul{
+    list-style:none;
+}
+.TCG a{
+    text-decoration:none;
+    color:black;
+}
+    .TCG a:hover{
+        color:blue;
+    }
