@@ -68,6 +68,18 @@ namespace ThuenhatroClient.Controllers
             }
             return View();
         }
+        public IActionResult Register()
+        {
+            return View();
 
+        }
+        public IActionResult ConfirmEmail()
+        {
+            return View();
+        }
+        public IActionResult ConfirmCodeEmail()
+        {
+            return View();
+        }
     }
 }
