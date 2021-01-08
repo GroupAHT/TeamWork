@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ThuenhatroAPI.Model;
+using ThuenhatroAPI.Models;
 using Microsoft.EntityFrameworkCore;
 namespace ThuenhatroAPI.Service
 {
     public class Properyty : IIProperty
     {
-        private readonly ClassContext classContext;
-        public Properyty(ClassContext classContext)
+        private readonly Context classContext;
+        public Properyty(Context classContext)
         { 
          this.classContext = classContext;
         }
@@ -48,13 +48,7 @@ namespace ThuenhatroAPI.Service
             return await classContext.Catagory.ToListAsync();
         }
 
-        public async Task<Picture> picture(Picture picture)
-        {
-            await classContext.Picture.AddAsync(picture);
-            await classContext.SaveChangesAsync();
-            return picture;
-        }
-
+    
         public async Task<Property> Update(Property property)
         {
             var model = await classContext.Property.SingleOrDefaultAsync(x => x.PropertyCode.Equals(property.PropertyCode));

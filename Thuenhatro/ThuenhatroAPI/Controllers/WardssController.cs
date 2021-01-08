@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ThuenhatroAPI.Service;
-using ThuenhatroAPI.Model;
+using ThuenhatroAPI.Models;
 namespace ThuenhatroAPI.Controllers
 {
     [Route("api/[controller]")]

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ThuenhatroAPI.Model;
+using ThuenhatroAPI.Models;
 using Microsoft.EntityFrameworkCore;
 namespace ThuenhatroAPI.Service
 {
     public class Warssds : IWard
     {
-        private ClassContext context;
-        public Warssds(ClassContext context)
+        private Context context;
+        public Warssds(Context context)
         {
             this.context = context;
         }

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ThuenhatroAPI.Model;
+using ThuenhatroAPI.Models;
 using Microsoft.EntityFrameworkCore;
 namespace ThuenhatroAPI.Service
 {
     public class Providerssd : IProvider
     {
-        private ClassContext context;
-        public Providerssd(ClassContext context)
+        private Context context;
+        public Providerssd(Context context)
         {
             this.context = context;
         }

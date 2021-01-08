@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ThuenhatroAPI.Model;
+using ThuenhatroAPI.Models;
 namespace ThuenhatroAPI.Service
 {
    public interface IIProperty
@@ -13,6 +13,5 @@ namespace ThuenhatroAPI.Service
         Task<Property> Delete(int Id);
         Task<IEnumerable<Catagory>> Getcta();
         Task<Catagory> catagory(Catagory catagory);
-        Task<Picture> picture(Picture picture);
     }
 }

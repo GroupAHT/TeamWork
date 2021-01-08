@@ -3,14 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ThuenhatroAPI.Model;
+using ThuenhatroAPI.Models;
 
 namespace ThuenhatroAPI.Service
 {
     public class Districk : IDistrick
     {
-        private ClassContext context;
-        public Districk(ClassContext context)
+        private Context context;
+        public Districk(Context context)
         {
             this.context = context;
         }
