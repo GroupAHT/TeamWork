@@ -81,3 +81,12 @@ C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatr
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmEmail.cshtml.g.cs
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmCodeEmail.cshtml.g.cs
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.csprojAssemblyReference.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.AssemblyInfoInputs.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.AssemblyInfo.cs
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.csproj.CoreCompileInputs.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.RazorAssemblyInfo.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.RazorAssemblyInfo.cs
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.dll
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.pdb

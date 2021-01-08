@@ -139,7 +139,7 @@ namespace ThuenhatroClient.Controllers
                     PictureCode = uniqueFileName,
                     CreateAT = DateTime.Now
                 };
-                var model = httpClient.PostAsJsonAsync<Property>(url+"PT/", newss).Result;
+                var model = httpClient.PostAsJsonAsync<Property>(url + "PT/", newss).Result;
                 if (model.IsSuccessStatusCode)//kiem tra trang thai post du lieu len web API
                 {
                     return RedirectToAction("Index");
@@ -151,6 +151,6 @@ namespace ThuenhatroClient.Controllers
             }
             return View();
         }
-        
+
     }
 }
