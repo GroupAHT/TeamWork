@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using ThuenhatroAPI.Models;
 using ThuenhatroAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using ThuenhatroAPI.Service;
 
 namespace ThuenhatroAPI
 {
@@ -30,6 +31,10 @@ namespace ThuenhatroAPI
         {
             string str = "server=.;database=ThuenhatroDB ;uid=sa;pwd=123";
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IWard, Warssds>();
+            services.AddScoped<IProvider, Providerssd>();
+            services.AddScoped<IIProperty, Properyty>();
+            services.AddScoped<IDistrick, Districk>();
             services.AddDbContext<Context>(options => options.UseSqlServer(str));
             services.AddControllers();
         }
