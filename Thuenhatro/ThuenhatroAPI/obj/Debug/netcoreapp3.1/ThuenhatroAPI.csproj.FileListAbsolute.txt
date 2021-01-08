@@ -59,3 +59,10 @@ C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatr
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.dll
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.pdb
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.genruntimeconfig.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.csprojAssemblyReference.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.AssemblyInfoInputs.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.AssemblyInfo.cs
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.csproj.CoreCompileInputs.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.dll
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.pdb
