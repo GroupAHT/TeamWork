@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using System.Net.Http;
 using Newtonsoft.Json;
-using ThuenhatroClient.Model;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ThuenhatroClient.Models;
 using Microsoft.AspNetCore.Http;
