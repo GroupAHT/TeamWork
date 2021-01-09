@@ -1,0 +1,299 @@
+﻿@model ThuenhatroClient.Models.CreateViewMode
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    .check-card {
+        list-style: none;
+        margin: 40px auto;
+        /* width: 320px;*/
+    }
+
+        .check-card .check-card-item {
+            position: relative;
+            /* width: 100%;*/
+            margin: 0 1% 15px;
+            font-size: 16px;
+            background: #3c9895;
+            overflow: hidden;
+        }
+
+        .check-card li label {
+            display: block;
+            position: absolute;
+            height: 300px;
+            width: 100%;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .check-card .check-card-body {
+            height: 300px;
+            color: #fff;
+            z-index: 2;
+            position: relative;
+        }
+
+        .check-card .check-card-body-in {
+            padding: 40px 20px 20px;
+        }
+
+        .check-card .check-card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+
+        .check-card .check-card-bg,
+        .check-card .check-card-toggle {
+            position: relative;
+            background: #2e2d37;
+            width: 36px;
+            height: 36px;
+            top: 10px;
+            left: 10px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .check-card .check-card-bg {
+            position: absolute;
+            background: #2e2d37;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            z-index: 0;
+        }
+
+        .check-card .check-card-toggle span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            margin-left: -10px;
+            height: 1px;
+            top: 50%;
+            left: 50%;
+            background: #fff;
+            -webkit-transition: all .4s ease-out;
+            transition: all .4s ease-out;
+            -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+        }
+
+            .check-card .check-card-toggle span:first-child {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+        .check-card .check-card-cancel {
+            font-size: 18px;
+            border-top: solid 1px #fff;
+            border-bottom: solid 1px #fff;
+            padding: 10px 0 7px;
+            text-align: center;
+            position: absolute;
+            bottom: -50px;
+            margin: 0 7%;
+            width: 86%;
+            -webkit-transition: all .3s cubic-bezier(0.5, -0.8, 0.5, 1.8);
+            transition: all .3s cubic-bezier(0.5, -0.8, 0.5, 1.8);
+        }
+
+        .check-card input[type=radio] {
+            display: none;
+        }
+
+            .check-card input[type=radio]:checked ~ .check-card-body .check-card-toggle span {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+                .check-card input[type=radio]:checked ~ .check-card-body .check-card-toggle span:first-child {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+            .check-card input[type=radio]:checked ~ .check-card-bg {
+                -webkit-transform: scale(25);
+                transform: scale(25);
+            }
+
+    #icon {
+        display: none;
+    }
+
+    .check-card input[type=radio]:checked ~ .check-card-body .check-card-cancel {
+        bottom: 128px;
+    }
+
+    .check-card input[type=radio]:checked ~ .check-card-body #icon {
+        display: block;
+    }
+
+    .check-card input[type=radio]:checked ~ .check-card-body .check-card-title {
+        font-size: 25px;
+        font-family: 'Oswald', sans-serif;
+    }
+</style>
+<hr />
+<script src="https://kit.fontawesome.com/cca0c56933.js" crossorigin="anonymous"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">Type: </label>
+                    <ul class="check-card">
+                        <div class="row">
+                            @foreach (var item in ViewBag.Cata)
+                            {
+                                var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+                                <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                                    <div class="card">
+                                        <li class="check-card-item" style="height:14rem;">
+                                            <input type="radio" id="check01_@item.Id" name="check" value="@item.Id">
+                                            <label for="check01_@item.Id" class="radio"></label>
+                                            <div class="check-card-bg"></div>
+                                            <div class="check-card-body">
+                                                <div class="check-card-toggle">
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="check-card-body-in">
+                                                    <h3 class="check-card-title" style="text-align:center !important;"><i id="icon" class="fas fa-check"></i>@item.Name</h3>
+                                                </div>
+                                                <div class="check-card-cancel">@String.Format(info, "{0:c}", item.Price) / @item.DateOUT day</div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </ul>
+                    <span asp-validation-for="CategoryCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProvinceCode" class="control-label"></label>
+                    <select name="ProvinceCode" id="ProvinceCode" asp-for="ProvinceCode" class="form-control">
+                        <option value="-1">Select</option>
+                        @foreach (var item in ViewBag.provider)
+                        {
+                            <option value="@item.id">@item._name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="ProvinceCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DistrictCode" class="control-label"></label>
+                    <select name="DistrictCode" id="DistrictCode" asp-for="DistrictCode" class="form-control">
+                        <option value="-1">Select</option>
+                        @*@foreach (var item in ViewBag.Districk)
+                            {
+                                <option value="@item.id">@item._name</option>
+                            }*@
+                    </select>
+                    <span asp-validation-for="DistrictCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="WardsCode" class="control-label"></label>
+                    <select name="WardsCode" id="WardsCode" asp-for="WardsCode" class="form-control">
+                        <option value="-1">Select</option>
+                        @*@foreach (var item in ViewBag.wards)
+                            {
+                                <option value="@item.id">@item._name</option>
+                            }*@
+                    </select>
+                    <span asp-validation-for="WardsCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Acreage" class="control-label"></label>
+                    <input asp-for="Acreage" class="form-control" />
+                    <span asp-validation-for="Acreage" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Photos" class="control-label"></label>
+                    <input asp-for="Photos" multiple class="form-control custom-file-input">
+                    <label class="custom-file-label">Choose File...</label>
+                    <span asp-validation-for="Photos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.custom-file-input').on("change", function () {
+            var fileLabel = $(this).next('.custom-file-label');
+            var files = $(this)[0].files;
+            if (files.length > 1) {
+                fileLabel.html(files.length + ' files selected');
+            }
+            else if (files.length == 1) {
+                fileLabel.html(files[0].name);
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#ProvinceCode").change(function () {
+            var id = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Districk", "Test")",
+                data: {id:id},
+                success: function (data) {
+                    $("#DistrictCode").empty();
+                    var s = '<option value="-1">Select</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        s += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+                    }
+                    $("#DistrictCode").html(s);
+                }
+            });
+        });
+
+        $("#DistrictCode").change(function () {
+            var id = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Ward", "Test")",
+                data: {id:id},
+                success: function (data) {
+                    $("#WardsCode").empty();
+                    var s = '<option value="-1">Select</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        s += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+                    }
+                    $("#WardsCode").html(s);
+                }
+            });
+        });
+    });
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
