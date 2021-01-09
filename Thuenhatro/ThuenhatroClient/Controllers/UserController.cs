@@ -81,5 +81,23 @@ namespace ThuenhatroClient.Controllers
         {
             return View();
         }
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        public IActionResult ConfirmCodePassword()
+        {
+            return View();
+        }
+        public IActionResult NewPassword()
+        {
+            return View();
+        }
+        public IActionResult UpdateInfoUser()
+        {
+            return View();
+        }
+
+
     }
 }
