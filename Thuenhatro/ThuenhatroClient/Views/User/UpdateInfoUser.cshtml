@@ -1,0 +1,77 @@
+﻿@model ThuenhatroClient.Models.User
+@{
+    ViewData["Title"] = "Cập nhật thông tin cá nhân";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" style="padding:25px;width:100%;background-color:#fefafa">
+            <div style=" text-align: center">
+                <div>
+                    <img style="width:60px;border-radius:50%;border:0.5px solid gray" src="~/image/Circled User Male Skin Type 4_96px.png" />
+                    <h5 style="color:chocolate;margin-bottom:0px">Lê Thanh Ân</h5>
+                    <p style="font-size:12px;color:gray;">anlethanh048@gmail.com</p>
+                </div>
+            </div>
+    
+        </div>
+        <div class="col-sm-10">
+            <h4 style="text-indent:20px;margin-top:30px">Cập nhật thông tin cá nhân.</h4>
+            <hr />
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-6">
+                    <div class="Log">
+                        <form action="@Url.Action("UpdateInfoUser", "User")" method="post" enctype="multipart/form-data">
+                            <table style="width:100%">
+                                <tr>
+                                    <td>
+                                        <p>Mã thành viên</p>
+                                    </td>
+                                    <td style="width:70%"> <input readonly type="text" name="uid" placeholder="#1973274" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Họ</p></td>
+                                    <td style="width:70%"> <input type="text" name="uid" placeholder="Lê" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Tên</p></td>
+                                    <td style="width:70%"> <input type="text" name="uid" placeholder="Thanh Ân" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Tên tài khoản</p></td>
+                                    <td style="width:70%"> <input type="text" name="uid" placeholder="thanhan" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Số điện thoại</p></td>
+                                    <td style="width:70%"> <input type="text" name="uid" placeholder="0354072542" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Email</p></td>
+                                    <td style="width:70%"> <input readonly type="text" name="uid" placeholder="anlethanh048@gmail.com" /></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="width:70%"><a href="#">Đổi Email</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Mật Khẩu</p></td>
+                                    <td style="width:70%"> <a href="#">Đổi mật khẩu</a></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Ngày tạo</p></td>
+                                    <td style="width:70%"><p>05/01/2021</p></td>
+                                </tr>
+                            </table>
+                            <input style="margin-top:10px;border-radius:3px;text-indent:0px;background-color:blue;color:white" type="submit" value="Cập nhật"/>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
