@@ -81,3 +81,7 @@ C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatr
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmEmail.cshtml.g.cs
 C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmCodeEmail.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ForgotPassword.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\ConfirmCodePassword.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\NewPassword.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\User\UpdateInfoUser.cshtml.g.cs
