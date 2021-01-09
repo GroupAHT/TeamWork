@@ -11,6 +11,10 @@ namespace ThuenhatroAPI.Models
     {
        public Context (DbContextOptions options) : base(options) { }
        public DbSet<User> User { get; set; }
-
+        public DbSet<Property> Property { get; set; }
+        public DbSet<Ward> ward { get; set; }
+        public DbSet<Provider> province { get; set; }
+        public DbSet<Districks> district { get; set; }
+        public DbSet<Catagory> Catagory { get; set; }
     }
 }
