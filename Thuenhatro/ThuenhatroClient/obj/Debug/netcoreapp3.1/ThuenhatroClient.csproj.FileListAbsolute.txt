@@ -173,3 +173,5 @@ C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\n
 C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.csproj.CopyComplete
 C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\ThuenhatroClient.genruntimeconfig.cache
 >>>>>>> a07dc7da5836590376bc5d6d2807ade3d713a496
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\Test\Create.cshtml.g.cs
+C:\Users\lenovo\OneDrive\Desktop\TeamWork\TeamWork\Thuenhatro\TeamWork\Thuenhatro\ThuenhatroClient\obj\Debug\netcoreapp3.1\Razor\Views\Test\Index.cshtml.g.cs
