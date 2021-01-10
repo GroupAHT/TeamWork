@@ -29,7 +29,7 @@ namespace ThuenhatroAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string str = "server=.;database=ThueNha;Trusted_Connection=true";
+            string str = "server=.;database=ThuenhatroDB ;uid=sa;pwd=123";
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IWard, Warssds>();
             services.AddScoped<IProvider, Providerssd>();
