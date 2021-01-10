@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\trung\\Documents\\GitHub\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {}
+    "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trung\\Documents\\GitHub\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {
+    "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trung\\Documents\\GitHub\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
         "projectName": "ThuenhatroClient",
-        "projectPath": "C:\\Users\\trung\\Documents\\GitHub\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
-        "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trung\\Documents\\GitHub\\TeamWork\\Thuenhatro\\ThuenhatroClient\\obj\\",
+        "projectPath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\ThuenhatroClient.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lenovo\\OneDrive\\Desktop\\TeamWork\\TeamWork\\Thuenhatro\\TeamWork\\Thuenhatro\\ThuenhatroClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,6 +63,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
