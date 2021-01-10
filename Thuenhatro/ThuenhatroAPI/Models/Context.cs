@@ -16,5 +16,7 @@ namespace ThuenhatroAPI.Models
         public DbSet<Provider> province { get; set; }
         public DbSet<Districks> district { get; set; }
         public DbSet<Catagory> Catagory { get; set; }
+
+        public DbSet<Picture> Picture { get; set; }
     }
 }
