@@ -192,9 +192,9 @@
                     <select name="DistrictCode" id="DistrictCode" asp-for="DistrictCode" class="form-control">
                         <option value="-1">Select</option>
                         @*@foreach (var item in ViewBag.Districk)
-                {
-                    <option value="@item.id">@item._name</option>
-                }*@
+                    {
+                        <option value="@item.id">@item._name</option>
+                    }*@
                     </select>
                     <span asp-validation-for="DistrictCode" class="text-danger"></span>
                 </div>
@@ -203,9 +203,9 @@
                     <select name="WardsCode" id="WardsCode" asp-for="WardsCode" class="form-control">
                         <option value="-1">Select</option>
                         @*@foreach (var item in ViewBag.wards)
-                {
-                    <option value="@item.id">@item._name</option>
-                }*@
+                    {
+                        <option value="@item.id">@item._name</option>
+                    }*@
                     </select>
                     <span asp-validation-for="WardsCode" class="text-danger"></span>
                 </div>
@@ -229,10 +229,15 @@
                     <input asp-for="Acreage" class="form-control" />
                     <span asp-validation-for="Acreage" class="text-danger"></span>
                 </div>
+                <span>Select File:</span>
+                <input type="file" name="postedFiles" multiple />
+                <br />
+
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <input type="submit" value="Upload" class="btn btn-primary" />
                 </div>
             </form>
+            <span style="color:green">@Html.Raw(ViewBag.Message)</span>
         </div>
     </div>
 </div>

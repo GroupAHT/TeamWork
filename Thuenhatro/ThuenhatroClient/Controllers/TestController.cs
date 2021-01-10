@@ -143,7 +143,7 @@ namespace ThuenhatroClient.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Property property, string check,int propertyCode)
+        public async Task<IActionResult> Create(Property property, string check, List<IFormFile> postedFiles)
         {
             try
             {
@@ -156,7 +156,38 @@ namespace ThuenhatroClient.Controllers
                     var properties1 = (from i in properties
                                        orderby i.PropertyCode descending
                                        select i).First();
-                    return RedirectToAction("Uploadss", new { id = properties1.PropertyCode });
+                    var ADDDING = new Picture();
+                    string wwwPath = this.Environment.WebRootPath;
+                    string contentPath = this.Environment.ContentRootPath;
+
+                    string path = Path.Combine(this.Environment.WebRootPath, "images/");
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+
+                    List<string> uploadedFiles = new List<string>();
+                    foreach (IFormFile postedFile in postedFiles)
+                    {
+                        string fileName = Path.GetFileName(postedFile.FileName);
+                        using (FileStream stream = new FileStream(Path.Combine(path, fileName), FileMode.Create))
+                        {
+                            postedFile.CopyTo(stream);
+                            uploadedFiles.Add(fileName);
+                            ADDDING.Name = fileName;
+                            ADDDING.PropertyCode = properties1.PropertyCode;
+                            var PostPic = httpClient.PostAsJsonAsync<Picture>(url + "Picture/", ADDDING).Result;
+                            if (PostPic.IsSuccessStatusCode)//kiem tra trang thai post du lieu len web API
+                            {
+                                ViewBag.Message += string.Format("<b>{0}</b> Update DB SUCCESS.<br />", fileName);
+                            }
+                            else
+                            {
+                                ViewBag.Message += string.Format("<b>{0}</b> uploaded.<br />", fileName);
+                            }
+                        }
+                    }
+                    return RedirectToAction("Index");
                 }
             }
             catch (Exception)
