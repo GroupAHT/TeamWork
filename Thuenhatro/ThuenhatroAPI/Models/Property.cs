@@ -26,9 +26,8 @@ namespace ThuenhatroAPI.Models
         [Required]
         public int Price { get; set; }
         [Required]
-        public float Acreage { get; set; }
+        public string Acreage { get; set; }
 
-        public string PictureCode { get; set; }
       
         public DateTime CreateAT { get; set; }
     }

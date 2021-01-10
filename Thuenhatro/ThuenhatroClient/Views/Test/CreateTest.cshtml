@@ -144,7 +144,6 @@
         <div class="col-md-12">
             <form asp-action="Create" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                @*<input hidden value="@ViewBag.ProCode" name="propertyCode">*@
                 <div class="form-group">
                     <label class="control-label">Type: </label>
                     <ul class="check-card">
@@ -192,9 +191,9 @@
                     <select name="DistrictCode" id="DistrictCode" asp-for="DistrictCode" class="form-control">
                         <option value="-1">Select</option>
                         @*@foreach (var item in ViewBag.Districk)
-                {
-                    <option value="@item.id">@item._name</option>
-                }*@
+                            {
+                                <option value="@item.id">@item._name</option>
+                            }*@
                     </select>
                     <span asp-validation-for="DistrictCode" class="text-danger"></span>
                 </div>
@@ -203,9 +202,9 @@
                     <select name="WardsCode" id="WardsCode" asp-for="WardsCode" class="form-control">
                         <option value="-1">Select</option>
                         @*@foreach (var item in ViewBag.wards)
-                {
-                    <option value="@item.id">@item._name</option>
-                }*@
+                            {
+                                <option value="@item.id">@item._name</option>
+                            }*@
                     </select>
                     <span asp-validation-for="WardsCode" class="text-danger"></span>
                 </div>
@@ -229,6 +228,12 @@
                     <input asp-for="Acreage" class="form-control" />
                     <span asp-validation-for="Acreage" class="text-danger"></span>
                 </div>
+                @*<div class="form-group">
+                    <label asp-for="PictureCode" class="control-label"></label>
+                    <input asp-for="Photos" multiple class="form-control custom-file-input">
+                    <label class="custom-file-label">Choose File...</label>
+                    <span asp-validation-for="Photos" class="text-danger"></span>
+                </div>*@
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
                 </div>

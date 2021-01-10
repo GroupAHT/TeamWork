@@ -119,3 +119,4 @@ C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netc
 C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.RazorTargetAssemblyInfo.cache
 C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.csproj.CopyComplete
 C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.genruntimeconfig.cache
+C:\Users\trung\Documents\GitHub\TeamWork\Thuenhatro\ThuenhatroAPI\obj\Debug\netcoreapp3.1\ThuenhatroAPI.csprojAssemblyReference.cache

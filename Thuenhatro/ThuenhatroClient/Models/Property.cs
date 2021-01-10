@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,10 +26,8 @@ namespace ThuenhatroClient.Models
         [Required]
         public int Price { get; set; }
         [Required]
-        public float Acreage { get; set; }
+        public string Acreage { get; set; }
 
-
-        public string PictureCode { get; set; }
       
         public DateTime CreateAT { get; set; }
     }

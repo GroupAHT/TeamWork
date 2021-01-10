@@ -8,59 +8,65 @@ namespace ThuenhatroAPI.Service
 {
     public class Properyty : IIProperty
     {
-        private readonly Context classContext;
-        public Properyty(Context classContext)
-        { 
-         this.classContext = classContext;
+        private Context context;
+        public Properyty(Context context)
+        {
+            this.context = context;
         }
         public async Task<Property> AddNew(Property property)
         {
-            classContext.Property.Add(property);
-            await classContext.SaveChangesAsync();
+            context.Property.Add(property);
+            await context.SaveChangesAsync();
             return property;
         }
 
+        //public async Task<Picture> AddPicture(Picture picture)
+        //{
+        //    classContext.Picture.Add(picture);
+        //    await classContext.SaveChangesAsync();
+        //    return picture;
+        //}
+
         public async Task<Catagory> catagory(Catagory catagory)
         {
-            classContext.Catagory.Add(catagory);
-            await classContext.SaveChangesAsync();
+            context.Catagory.Add(catagory);
+            await context.SaveChangesAsync();
             return catagory;
         }
 
         public async Task<Property> Delete(int Id)
         {
-            var Check = classContext.Property.Find(Id);
+            var Check = context.Property.Find(Id);
             if (Check != null)
             {
-                classContext.Property.Remove(Check);
+                context.Property.Remove(Check);
             }
-            await classContext.SaveChangesAsync();
+            await context.SaveChangesAsync();
             return Check;
-        }
-
-        public async Task<IEnumerable<Property>> GetAll()
-        {
-            return await classContext.Property.ToListAsync();
         }
 
         public async Task<IEnumerable<Catagory>> Getcta()
         {
-            return await classContext.Catagory.ToListAsync();
+            return await context.Catagory.ToListAsync();
         }
 
-    
         public async Task<Property> Update(Property property)
         {
-            var model = await classContext.Property.SingleOrDefaultAsync(x => x.PropertyCode.Equals(property.PropertyCode));
+            var model = await context.Property.SingleOrDefaultAsync(x => x.PropertyCode.Equals(property.PropertyCode));
             if (model != null)
-            {    
-                classContext.SaveChanges();
+            {
+                context.SaveChanges();
                 return property;
             }
             else
             {
                 return null;
             }
+        }
+
+        public async Task<IEnumerable<Property>> FindAll()
+        {
+            return await context.Property.ToListAsync();
         }
     }
 }

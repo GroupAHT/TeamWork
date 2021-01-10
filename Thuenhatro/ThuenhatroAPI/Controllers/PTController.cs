@@ -7,28 +7,24 @@ using System.Threading.Tasks;
 using ThuenhatroAPI.Service;
 using ThuenhatroAPI.Models;
 using Microsoft.AspNetCore.Hosting;
-
+using System.IO;
 namespace ThuenhatroAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class PTController : ControllerBase
     {
-        [Obsolete]
-        private readonly IHostingEnvironment _hostingEnvironment;
         private IIProperty db;
 
-        [Obsolete]
-        public PTController(IIProperty db, IHostingEnvironment hostingEnvironment)
+        public PTController(IIProperty db)
         {
             this.db = db;
-            _hostingEnvironment = hostingEnvironment; ;
         }
 
         [HttpGet()]
-        public Task<IEnumerable<Property>> Get()
+        public Task<IEnumerable<Property>> FindAll()
         {
-            return db.GetAll();
+            return db.FindAll();
         }
 
         [HttpPut("{id}")]
@@ -40,7 +36,7 @@ namespace ThuenhatroAPI.Controllers
         [HttpPost()]
 
         public Task<Property> Post(Property property)
-        {
+        {  
             return db.AddNew(property);
         }
         [HttpDelete("{id}")]

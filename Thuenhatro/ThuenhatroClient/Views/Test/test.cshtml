@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ThuenhatroClient.Models.Property>
+
+@{
+    ViewData["Title"] = "test";
+}
+
+<h1>test</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PropertyCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProvinceCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DistrictCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WardsCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acreage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateAT)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProvinceCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DistrictCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WardsCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acreage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateAT)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

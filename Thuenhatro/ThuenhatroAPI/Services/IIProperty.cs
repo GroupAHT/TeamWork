@@ -7,7 +7,7 @@ namespace ThuenhatroAPI.Service
 {
    public interface IIProperty
     {
-        Task<IEnumerable<Property>> GetAll();
+        Task<IEnumerable<Property>> FindAll();
         Task<Property> AddNew(Property property);
         Task<Property> Update(Property property);
         Task<Property> Delete(int Id);
