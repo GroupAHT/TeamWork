@@ -6,47 +6,231 @@
     <title>@ViewData["Title"] - ThuenhatroClient</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/css/bootstrap.css" rel="stylesheet"/>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
     <link href="~/css/Style.css" rel="stylesheet" />
+    <link rel='stylesheet' type='text/css' href='css/index1.css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThuenhatroClient</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+
+    <div id="webpage" style="height: auto !important;">
+
+        <!--navbar top-->
+        <div id="navbarTop">
+            <div class="container clearfix ">
+                <div class="user-bar">
+                    <a rel="nofollow" class="link user_login_link" href="#">Đăng nhập</a>
+                    <a rel="nofollow" class="link user_register_link" href="#"> Đăng ký</a>
+                    <a rel="nofollow" class="link user_post_link" href="#"> Đăng tin mới</a>
+                </div>
+            </div>
+        </div>
+        <!--end navbar Top-->
+        <header>
+            <div id="header" class="container clearfix">
+                <div class="header_left">
+                    <a class="logo" href="#" title="cho thuê phòng trọ, cho thuê nhà trọ, tìm phòng trọ">
+                        <img src="#">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--Menu-->
+        <div id="menu">
+            <nav class="navbar navbar-expand-sm bg-info navbar-dark fix-nav">
+                <div class="container clearfix">
+                    <ul class="navbar-nav">
+                        <li class=" nav-item clearfix clearfix active">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    Trang
+                                    chủ
+                                </span>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    Cho
+                                    thuê phòng trọ
+                                </span>
+                            </a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    Nhà cho
+                                    thuê
+                                </span>
+                            </a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#"><span>Cho thuê căn hộ</span></a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#"><span>Cho thuê mặt bằng</span></a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#"><span>Tìm người ở ghép</span></a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#"><span>Hướng dẫn</span></a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#"><span>Nạp tiền</span></a>
+                        </li>
+                        <li class=" nav-item clearfix">
+                            <a class="nav-link" href="#"><span>Bảng giá dịch vụ</span></a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - ThuenhatroClient - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </nav>
         </div>
-    </footer>
+        <!--End menu-->
+        <!--Main content-->
+        @RenderBody()
+        <!--End main content-->
+        <footer>
+            <div id="footer">
+                <div class="container">
+                    <div class="footer_row clearfix">
+                        <div class="footer_col">
+                            <div class="footer_col_header">
+                                <a class="logo" href="#">
+                                    Thuê phòng
+                                    trọ
+                                </a>
+                            </div>
+                            <div class="footer_col_body">
+                                <p style="line-height: 1.3;">
+                                    Đứng đầu các từ khóa liên quan đến <a href="#"
+                                                                          title="phòng trọ cho thuê"><strong>phòng trọ cho thuê</strong></a>, <a href="#"
+                                                                                                                                                 title="nhà cho thuê">
+                                        <strong>
+                                            nhà cho
+                                            thuê
+                                        </strong>
+                                    </a>, <a href="#" title="tìm người ở ghép">
+                                        <strong>
+                                            tìm người ở
+                                            ghép
+                                        </strong>
+                                    </a>
+                                </p>
+                                <p style="line-height: 1.3;">
+                                    <strong>70.000+</strong> tin bài trên hệ thống, và
+                                    tiếp tục tăng
+                                </p>
+                                <p style="line-height: 1.3;">
+                                    <strong>300.000+</strong> khách truy cập và
+                                    <strong>hơn 2 triệu</strong> lượt xem mỗi tháng
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer_col">
+                            <div class="footer_col_header">Về ThueNhaTro</div>
+                            <div class="footer_col_body">
+                                <ul class="footer_menu">
+                                    <li><a href="#">Trang chủ</a></li>
+                                    <li>
+                                        <a rel="nofollow" href="#">
+                                            Giới
+                                            thiệu
+                                        </a>
+                                    </li>
+                                    <li><a rel="nofollow" href="#">Liên hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_col">
+                            <div class="footer_col_header">Hỗ trợ khách hàng</div>
+                            <div class="footer_col_body">
+                                <ul class="footer_menu">
+                                    <li>
+                                        <a rel="nofollow" href="#">
+                                            Câu
+                                            hỏi thường gặp
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">
+                                            Hướng dẫn
+                                            đăng tin
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">
+                                            Bảng giá dịch
+                                            vụ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">
+                                            Quy định đăng
+                                            tin
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#">
+                                            Chính sách
+                                            giải quyết khiếu nại
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_col">
+                            <div class="footer_col_header">Liên hệ với chúng tôi</div>
+                            <div class="footer_col_body mb30">
+                                <a rel="nofollow" target="_blank"
+                                   style="display: inline-block; margin-right: 5px;" href="#">
+                                    <img style="border: 1px solid rgb(50, 89, 157); border-radius: 50%;"
+                                         src="Image/icon_facebook.png" width="30">
+                                </a><a rel="nofollow" target="_blank" style="display: inline-block; margin-right: 5px;"
+                                       href="#">
+                                    <img style="border: 1px solid rgb(223, 63, 49); border-radius: 50%;"
+                                         src="Image/icon_youtube.png" width="30">
+                                </a><a rel="nofollow" target="_blank" style="display: inline-block; margin-right: 5px;"
+                                       href="#">
+                                    <img style="border: 1px solid #00a1dc; border-radius: 50%;"
+                                         src="Image/zalo.png" width="30">
+                                </a><a rel="nofollow" target="_blank" style="display: inline-block;"
+                                       href="#">
+                                    <img style="border: 1px solid #54a3de; border-radius: 50%;"
+                                         src="Image/icon_twitter.png" width="30">
+                                </a>
+                            </div>
+                            <div class="footer_col_header">Phương thức thanh toán</div>
+                            <div class="footer_col_body">
+                                <span class="bds_icon icon_visa"></span><span class="bds_icon icon_mastercard"></span><span class="bds_icon icon_jcb"></span><span class="bds_icon icon_internet_banking"></span><span class="bds_icon icon_momo"></span><span class="bds_icon icon_tienmat"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/bootstrap.js"></script>
     @RenderSection("Scripts", required: false)
+    @Html.Raw(TempData["msg"])
+    <script>
+    function sortSelect() {
+        var selObj = document.getElementById("sortSelect");
+        var selValue = selObj.value;
+            var url = '@Url.Action("Index", "Home")' + 'City=' + selValue;
+        window.location.href = url;
+        @*var url = '@Url.Action("Index", "PageList", new { searchText ="findMe", sortby = "sortMe"}).Replace("&amp;", "&")';
+        window.location.href = url.replace('findMe', selSearchValue).replace('sortMe', selValue);*@
+    }
+    </script>
 </body>
 </html>

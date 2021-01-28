@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ThuenhatroClient.Models.Property>
+<ul class="list-post">
+    @foreach (var item in Model)
+    {
+        <li class="post clearfix">
+            <div class="post-thumb " data-background-image="#" data-loaded="true">
+                <a class="post-link" href="#"
+                   alt="@item.Title"
+                   title=""></a>
+                <div class="icon_vip" style="background-color:#E13427;">new</div>
+                <div class="image_number"><span>3 ảnh</span></div>
+            </div>
+            <div class="post-info clearfix">
+                <div class="title">
+                    <a class="post-link" style="color:#E13427;" href="#"
+                       alt="@item.Title">@item.Title</a>
+                </div>
+                <div class="price"><strong>@item.Price</strong></div>
+                <div class="clearfix news-content">
+                    <div class="acreage">
+                        <span class="name">Diện tích: </span><span class="value">@item.Acreage</span>
+                    </div>
+                    <div class="address">
+                        <span class="name">Khu vực:</span><span class="value">
+                            <a href="#"
+                               title="@item.Title">@item.Title</a>
+                        </span>
+                    </div>
+                    <div class="timeago">
+                        <span class="name">Cập nhật:</span><span class="value">@item.CreateAT</span>
+                    </div>
+                </div>
+                <p class="news-content-p">@item.Description</p>
+            </div>
+        </li>
+    }
+
+</ul>

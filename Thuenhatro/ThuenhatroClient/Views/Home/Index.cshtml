@@ -1,8 +1,329 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+    var pageList = (IPagedList)ViewBag.NewsInformation;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+
+<main id="main" style="height: auto !important;">
+    <!--Search bar-->
+    <div id="searchbar">
+        <div class="container search-bar">
+            <form role="search" method="POST" id="searchformTop" class="searchform js-form-submit-search"
+                  data-action-url="#" novalidate="novalidate">
+                <div class="search_field">
+                    <div class="clearfix">
+
+                        <div class="search_field_item search_field_item_loaitin">
+                            <label class="search_field_item_label">Loại tin</label>
+                            <select id="search_room_type"
+                                    class="form-control js_select2_room_type select2-hidden-accessible" name="type"
+                                    tabindex="-1" aria-hidden="true">
+
+                                <option value="1">Phòng trọ, nhà trọ</option>
+                                <option value="2">Nhà thuê nguyên căn</option>
+                                <option value="3">Cho thuê căn hộ</option>
+                                <option value="4">Tìm người ở ghép</option>
+                                <option value="5">Cho thuê mặt bằng</option>
+                            </select>
+                            <span hidden>Value selected</span>
+                        </div>
+                        <div class="search_field_item search_field_item_tinhthanh">
+                            <label class="search_field_item_label">Tỉnh thành</label>
+                            <select class="form-control tinh-tp js_select2_tinhthanh js-select-tinhthanhpho select2-hidden-accessible" name="tinh" tabindex="-1" aria-hidden="true" id="sortSelect" onclick="sortSelect()">
+                                <option value="0">Tất cả</option>
+
+                                @foreach (var item in ViewBag.City)
+                                {
+                                    <option value="@item._code" id="@item._code">@item._name</option>
+
+                                }
+                            </select>
+                            <span hidden>Value selected</span>
+                        </div>
+                        <div class="search_field_item search_field_item_quanhuyen">
+                            <label class="search_field_item_label">Quận huyện</label><select class="form-control js_select2_quanhuyen js-select-quanhuyen select2-hidden-accessible"
+                                                                                             name="quan" data-current="" tabindex="-1" aria-hidden="true">
+                                <option value="0">Tất cả</option>
+                                @foreach (var item in ViewBag.Address)
+                                {
+                                    <option value="@item.Districks.id">@item.Districks._name</option>
+                                }
+                            </select><span hidden></span>
+                        </div>
+                        <div class="search_field_item search_field_item_mucgia">
+                            <label class="search_field_item_label">Khoảng giá</label><select class="form-control price js_select2_price select2-hidden-accessible" name="gia"
+                                                                                             tabindex="-1" aria-hidden="true">
+                                <option value="0" selected="">Chọn mức giá</option>
+                                <option value="1">Dưới 1 triệu</option>
+                                <option value="2">1 triệu - 2 triệu</option>
+                                <option value="3">2 triệu - 3 triệu</option>
+                                <option value="4">3 triệu - 5 triệu</option>
+                                <option value="5">5 triệu - 7 triệu</option>
+                                <option value="6">7 triệu - 10 triệu</option>
+                                <option value="7">10 triệu - 15 triệu</option>
+                                <option value="8">Trên 15 triệu</option>
+                            </select>
+                            <span hidden>Value selected</span>
+                        </div>
+                        <div class="search_field_item search_field_item_dientich">
+                            <label class="search_field_item_label">Diện tích</label><select id="search_dientich"
+                                                                                            name="dt" class="form-control js_select2_acreage select2-hidden-accessible"
+                                                                                            tabindex="-1" aria-hidden="true">
+                                <option value="0" selected="">Chọn diện tích</option>
+                                <option value="1">Dưới 20 m2</option>
+                                <option value="2">20 m2 - 30 m2</option>
+                                <option value="3">30 m2 - 50 m2</option>
+                                <option value="4"> 50 - 60 m2</option>
+                                <option value="5"> 60 - 70 m2</option>
+                                <option value="6"> 70 - 80 m2</option>
+                                <option value="7"> 80 - 90 m2</option>
+                                <option value="8"> 90 - 100 m2</option>
+                                <option value="9"> Trên 100 m2</option>
+                            </select>
+                            <span hidden>Value selected</span>
+                        </div>
+                        <div class="search_field_item search_field_item_submit">
+                            <label class="search_field_item_label">&nbsp;</label>
+                            <input type="submit" class="btn btn-default btn_search_box" value="Lọc tin" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--End search bar-->
+    <!--Hot location-->
+    <div class="top-location">
+        <div class="container location_position">
+            <h3 class="title">Khu vực nổi bật </h3>
+            <ul class="location-city clearfix" style="white-space:nowrap;">
+                <li class="hcm size-img-city">
+                    <a href="#" title="Cho thuê phòng trọ Hồ Chí Minh" class="city-img city-img-hcm">
+                        <span class="text2">Phòng trọ <span>Hồ Chí Minh</span></span>
+                    </a>
+                </li>
+                <li class="hn size-img-city">
+                    <a href="#" title="Cho thuê phòng trọ Hà Nội" class="city-img city-img-hn">
+                        <span class="text2">Phòng trọ <span>Hà Nội</span></span>
+                    </a>
+                </li>
+                <li class="dn size-img-city">
+                    <a href="#" title="Cho thuê phòng trọ Đà Nẵng" class="city-img city-img-dn">
+                        <span class="text2">Phòng trọ <span>Đà Nẵng</span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!--End hot location-->
+    <!--Hot new-->
+    <div id="news" class="total_news">
+        <div class="container">
+            <div class="header">
+                <span>Tin nổi bật</span><a style="margin-left: 10px;" target="blank"
+                                           href="#">Làm sao để đăng tin nằm ở đây?</a>
+            </div>
+            <div class="content">
+                <ul class="list-post clearfix">
+
+                    @foreach (var item in ViewBag.hotNews)
+                    {
+                        <li id="post" class="post clearfix">
+                            <div class="post-thumb" data-background-image="#">
+                                <a class="post-link" href="#" alt="#"
+                                   title=""></a>
+                                <div class="icon_vip" style="background-color:#E13427;">hot</div>
+                                <div class="image_number"><span>0 ảnh</span></div>
+                            </div>
+                            <div class="post-info clearfix">
+                                <h3 class="title">
+                                    <a class="post-link" style="color:#E13427;" href="#"
+                                       alt="@item.Property.Title">@item.Property.Title</a>
+                                </h3>
+                                <div class="price"><strong>@item.Property.Price</strong></div>
+                                <div class="clearfix post-info-more">
+                                    <div class="acreage"><span class="value">@item.Property.Acreage</span></div>
+                                    <div class="address">
+                                        <span class="value">
+                                            <a href="#">@item.Districks._name</a>
+                                        </span>
+                                    </div>
+                                    <div class="timeago" style="display: block;">
+                                        <span class="name">
+                                            Cập nhật:
+                                        </span><span class="value">@item.Property.CreateAT</span>
+                                    </div>
+                                </div>
+                                <p class="p_content">@item.Property.Description</p>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End hot new-->
+    <div class="container second-title">
+        <h1>Danh sách tin</h1>
+    </div>
+    <!--Content view-->
+    <div class="container" style="height: auto !important;">
+        <div class="news-list clearfix" style="height: auto !important;">
+            <div class="block-left" style="height: auto !important;">
+
+                <div class="wrapper">
+                    <ul class="list-post">
+                        @foreach (var item in ViewBag.NewsInformation)
+                        {
+                            <li class="post clearfix">
+                                <div class="post-thumb " data-background-image="#" data-loaded="true">
+                                    <a class="post-link" href="#"
+                                       alt="@item.Property.Title"
+                                       title=""></a>
+                                    <div class="icon_vip" style="background-color:#E13427;">new</div>
+                                    <div class="image_number"><span>3 ảnh</span></div>
+                                </div>
+                                <div class="post-info clearfix">
+                                    <div class="title">
+                                        <a class="post-link" style="color:#E13427;" href="#"
+                                           alt="@item.Property.Title">@item.Property.Title</a>
+                                    </div>
+                                    <div class="price"><strong>@item.Property.Price</strong></div>
+                                    <div class="clearfix news-content">
+                                        <div class="acreage">
+                                            <span class="name">Diện tích: </span><span class="value">@item.Property.Acreage</span>
+                                        </div>
+                                        <div class="address">
+                                            <span class="name">Khu vực:</span><span class="value">
+                                                <a href="#"
+                                                   title="@item.Ward._name">@item.Ward._name</a>
+                                            </span>
+                                        </div>
+                                        <div class="timeago">
+                                            <span class="name">Cập nhật:</span><span class="value">@item.Property.CreateAT</span>
+                                        </div>
+                                    </div>
+                                    <p class="news-content-p">@item.Property.Description</p>
+                                </div>
+                            </li>
+                        }
+
+                    </ul>
+
+                </div>
+
+                <div class="clearfix">
+                    <hr>
+                    <div class="product-pagination text-center">
+                        @Html.PagedListPager(pageList, page => Url.Action("Index", new { page }))
+                    </div>
+
+                </div>
+            </div>
+            <div id="sidebar" class="block-right">
+                <div class="sidebar_submenu">
+                    <div class="title">Danh mục cho thuê</div>
+                    <ul>
+                        <li>
+                            <a href="#" title="Cho thuê phòng trọ">
+                                Cho
+                                thuê phòng trọ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cho thuê phòng trọ Hồ Chí Minh">
+                                Cho thuê phòng trọ Hồ Chí
+                                Minh
+                            </a>
+                        </li>
+                        <li><a href="#" title="Cho thuê phòng trọ Hà Nội">Cho thuê phòng trọ Hà Nội</a></li>
+                        <li>
+                            <a href="#" title="Cho thuê nhà nguyên căn">
+                                Cho
+                                thuê nhà nguyên căn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cho thuê căn hộ">
+                                Cho thuê
+                                căn hộ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cho thuê mặt bằng">
+                                Cho
+                                thuê mặt bằng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Tìm người ở ghép">
+                                Tìm
+                                người ở ghép
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list_post_recent">
+                    <div class="header">Tin mới đăng</div>
+                    <ul>
+
+                        @foreach (var item in ViewBag.nows)
+                        {
+                            <li class="tin-vip vip3">
+                                <a href="#">
+                                    <span class="title" style="color:#3763e0;">
+                                        @item.Property.Title
+                                    </span><span class="price">@item.Property.Price</span><time class="timeago"><span>@item.Property.CreateAT</span></time>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End content view-->
+    <div id="support_box">
+        <div class="container clearfix">
+            <div class="header">Hỗ trợ khách hàng</div>
+            <div class="content">
+                <div class="list_support clearfix">
+                    <div class="item clearfix">
+                        <a rel="nofollow">
+                            <img src="/Image/creditCart.png" width="30" height="30">
+                            <div class="name">Hỗ trợ thanh toán</div>
+                            <div class="value">0358818164</div>
+                        </a>
+                    </div>
+                    <div class="item clearfix">
+                        <a rel="nofollow">
+                            <img src="/Image/phone.png" width="30" height="30">
+                            <div class="name">Trợ giúp đăng tin</div>
+                            <div class="value">0867467838</div>
+                        </a>
+                    </div>
+                    <div class="item clearfix">
+                        <a rel="nofollow">
+                            <img src="/Image/phone.png" width="30" height="30">
+                            <div class="name">Trợ giúp đăng tin</div>
+                            <div class="value">0358818164</div>
+                        </a>
+                    </div>
+                    <div class="item clearfix">
+                        <a rel="nofollow" target="_blank"
+                           href="#">
+                            <img src="/Image/zalo.png" width="30"
+                                 height="30" style="border: 1px solid #00a1dc; border-radius: 50%;">
+                            <div class="name">Zalo</div>
+                            <div class="value">0867467838</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
